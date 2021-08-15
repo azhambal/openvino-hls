@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    build: ./app
+    volumes:
+      - hlsdata:/app/video
+  openvino:
+    build: ./openvino
+    volumes:
+      - hlsdata:/home/openvino
+volumes: 
+  hlsdata:
